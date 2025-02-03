@@ -21,38 +21,29 @@ def parse_date(date_str: str) -> datetime:
     raise ValueError(f"Unrecognized date format: {date_str}")
 
 def calculate_payment(terms: dict, prices: dict) -> dict:
-    principal = terms["principal"]["amount"]
-    currency = terms["principal"]["currency"]
-    payment_terms = terms["payment_terms"]
+    initial_price = terms["payment_terms"]["initial_level"]  # e.g., 12.50 (real value)
+    current_price = prices["Engie shares"]  # e.g., 15.88
     
-    # Get initial price from term sheet
-    initial_price = payment_terms["initial_level"]  # Added to payment_terms
+    # Convert percentage-based barriers to absolute values
+    autocall_level = initial_price * (terms["payment_terms"]["autocall_level"] / 100)
+    barrier_level = initial_price * (terms["payment_terms"]["barrier_level"] / 100)
     
-    payment_due = 0
-    conditions = []
-
-    # 1. Check autocall triggers
-    for date_str in payment_terms["observation_dates"]:
-        if is_past_date(date_str):
-            asset_price = prices[terms["underlying_assets"][0]["name"]]  # First asset
-            if asset_price >= payment_terms["autocall_level"] * initial_price / 100:
-                payment_due = principal * payment_terms["coupon_rate"]
-                conditions.append(f"Autocall @ {date_str}")
-                break  # Stop at first trigger
-
-    # 2. If no autocall, check barrier at maturity
-    if not conditions:
-        final_price = prices[terms["underlying_assets"][0]["name"]]
-        
-        if final_price >= payment_terms["barrier_level"] * initial_price / 100:
-            payment_due = principal
-            conditions.append("Barrier condition met")
-        else:
-            payment_due = principal * (final_price / initial_price)
-            conditions.append("Below barrier")
-
+    # Calculate performance
+    performance = (current_price - initial_price) / initial_price
+    
+    if current_price >= autocall_level:
+        payment = terms["principal"]["amount"] * terms["payment_terms"]["coupon_rate"]
+        trigger = "autocall"
+    elif current_price >= barrier_level:
+        payment = terms["principal"]["amount"]
+        trigger = "barrier"
+    else:
+        payment = terms["principal"]["amount"] * (current_price / initial_price)
+        trigger = "loss"
+    
     return {
-        "payment_due": round(payment_due, 2),
-        "currency": currency,
-        "conditions": conditions
+        "payment_due": round(payment, 2),
+        "currency": terms["principal"]["currency"],
+        "performance_pct": round(performance * 100, 2),
+        "trigger": trigger
     }

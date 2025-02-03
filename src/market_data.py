@@ -59,3 +59,11 @@ def fetch_from_alphavantage(asset: dict) -> float:
     
     response = requests.get(url).json()
     return float(response["Global Quote"]["05. price"])
+
+def get_historical_price(ticker: str, date: str) -> float:
+    """Get closing price on a specific date (YYYY-MM-DD format)"""
+    try:
+        data = yf.Ticker(ticker).history(start=date, end=date)
+        return data["Close"].iloc[0] if not data.empty else None
+    except:
+        return None

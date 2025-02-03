@@ -24,7 +24,8 @@ def parse_terms_with_gpt(text: str) -> dict:
        - "ticker" (e.g., "AAPL" or "ENGI.PA")
        - "exchange" (e.g., "Euronext Paris")
     2. For "payment_terms", include:
-        - "initial_level": [numeric value from "Asset Initial Price" section]
+        - "initial_level": The numerical value of the Asset Initial Price (e.g., 12.50)
+        - "initial_date": The date of the Initial Closing Price (e.g., "2024-12-20")
        - "autocall_level" (as a percentage, e.g., 100)
        - "barrier_level" (as a percentage, e.g., 70)
        - "coupon_rate" (as a decimal, e.g., 0.0785)

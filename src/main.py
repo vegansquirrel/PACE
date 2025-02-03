@@ -64,6 +64,7 @@ def run_pipeline(term_sheet_path: Path):
     result = calculate_payment(terms, prices)
     save_json(result, "payment_report.json")
     
+    
     return result
 
 if __name__ == "__main__":

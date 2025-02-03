@@ -1,5 +1,12 @@
 from datetime import datetime
 
+# validation.py
+VALID_TICKERS = ["ENGIE.PA", "SAN.PA", "BNP.PA"]  # Common Euronext Paris tickers
+
+def validate_ticker(asset: dict):
+    if asset["ticker"] not in VALID_TICKERS:
+        raise ValueError(f"Unrecognized ticker: {asset['ticker']}. Verify term sheet!")
+
 def validate_terms(terms: dict) -> None:
     # Check for required keys
     required_keys = ["underlying_assets", "payment_terms", "principal"]

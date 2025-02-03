@@ -8,6 +8,7 @@
   ],
   "payment_terms": {
     "initial_level": 100,
+    "initial_date": "2024-12-20",
     "autocall_level": 100,
     "barrier_level": 70,
     "coupon_rate": 0.0785,
