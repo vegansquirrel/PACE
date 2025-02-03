@@ -9,5 +9,10 @@ DOCUMENT_PATHS = {
 }
 
 
-OPENAI_API_KEY = "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"  # Or load from .env
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("api_key")
 GPT_MODEL = "gpt-4-turbo"
