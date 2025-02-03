@@ -1,6 +1,7 @@
 {
   "payment_due": 15.88,
   "currency": "EUR",
-  "performance_pct": -84.12,
-  "trigger": "loss"
-}
+  "conditions": [
+    "Below barrier"
+  ]
+} 
