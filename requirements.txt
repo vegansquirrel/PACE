@@ -1,0 +1,4 @@
+openai
+pdfplumber
+yfinance
+python-dotenv
