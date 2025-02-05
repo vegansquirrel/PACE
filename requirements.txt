@@ -2,3 +2,4 @@ openai
 pdfplumber
 yfinance
 python-dotenv
+python-dateutil

@@ -1,18 +1,15 @@
 from pathlib import Path
-
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent  # This goes up from config/ to project root
-DOCUMENT_PATHS = {
-    "term_sheet": PROJECT_ROOT / "input" / "Final-Terms_GB00BTC0W820.pdf",
-    "prospectus": PROJECT_ROOT / "input" / "GS-Series-P-Master-Base-Prospectus-12-January-2024-FINAL.pdf"
-}
-
-
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# Path configuration
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DOCUMENT_PATHS = {
+    "term_sheet": PROJECT_ROOT / "input" / "Final-terms-Pricing-supplement-_2024-02-08.pdf"
+}
 
-OPENAI_API_KEY = os.getenv("api_key")
+# API configuration
+load_dotenv(PROJECT_ROOT / '.env')
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GPT_MODEL = "gpt-4-turbo"
+MAX_TOKENS = 4096 # Adjust based on model context window
