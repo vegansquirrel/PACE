@@ -1,3 +1,4 @@
+
 class TermValidator:
     ESSENTIAL_CHECKS = [
         ('product_type', lambda x: x in ['autocallable', 'convertible']),

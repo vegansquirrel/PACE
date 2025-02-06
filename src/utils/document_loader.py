@@ -1,16 +1,30 @@
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent  # This goes up from config/ to project root
-
-DOCUMENT_PATHS = {
-    "term_sheet": PROJECT_ROOT / "input" / "Final-Terms_GB00BTC0W820.pdf"
-}
-
 import pdfplumber
-def extract_text(pdf_path: Path) -> str:
-    """Extract text from a PDF file."""
-    with pdfplumber.open(pdf_path) as pdf:
-        return "\n".join(page.extract_text() for page in pdf.pages)
+from pathlib import Path
+import json
 
+def load_term_sheet(file_path: str) -> str:
+    """
+    Load and extract text from a term sheet PDF document
+    """
+    path = Path(file_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Term sheet not found at: {file_path}")
+    
+    text = []
+    with pdfplumber.open(path) as pdf:
+        for page in pdf.pages:
+            page_text = page.extract_text()
+            if page_text:
+                text.append(page_text)
+    
+    return "\n".join(text)
 
-print(PROJECT_ROOT)
+def save_result(data: dict, output_path: str) -> None:
+    """
+    Save payment results to JSON file
+    """
+    output_dir = Path(output_path).parent
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    with open(output_path, 'w') as f:
+        json.dump(data, f, indent=2)
