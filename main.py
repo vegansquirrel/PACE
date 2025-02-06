@@ -4,7 +4,8 @@ from src.pipeline.temporal_processing import TemporalProcessor
 from src.pipeline.calculation_engine import CalculationEngine
 from src.pipeline.validation import TermValidator
 
-from src.utils.document_loader import load_term_sheet
+
+from src.utils.document_loader import load_term_sheet, save_result
 
 def main():
     # Initialize components
@@ -15,7 +16,7 @@ def main():
     validator = TermValidator()
     
     # Load document
-    doc_text = load_term_sheet("input/term_sheet.pdf")
+    doc_text = load_term_sheet("input/Final-terms-Pricing-supplement-_2024-02-08.pdf")
     
     # Process pipeline
     analysis = analyzer.analyze(doc_text)

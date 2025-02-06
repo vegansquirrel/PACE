@@ -28,4 +28,4 @@ class ConceptualAnalyzer:
             )
             analysis["sections"].append(response)
         
-        return self._consolidate_analysis(analysis)
+        return analysis

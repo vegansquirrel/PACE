@@ -10,7 +10,7 @@ class DocumentResolver:
             queries=queries,
             context=prospectus_text
         )
-        return self._merge_findings(results)
+        return results
     
     def _generate_queries(self, conceptual_map):
         return [

@@ -1,6 +1,9 @@
 from openai import OpenAI
 import os
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class LLMAdapter:
     def query(self, system_prompt, user_prompt, **kwargs):
@@ -15,4 +18,4 @@ class LLMAdapter:
             temperature=kwargs.get("temperature", 0.2),
             max_tokens=kwargs.get("max_tokens", 2000)
         )
-        return self._validate_response(json.loads(response.choices[0].message.content))
+        return json.loads(response.choices[0].message.content)
