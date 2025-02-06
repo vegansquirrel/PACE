@@ -18,12 +18,11 @@ Document:
 
 Return JSON with:
 - extracted_values
-- verification_sources: {"section", "page"}
 - confidence: 0-1
 - validation_checks"""
 
     def extract(self, analysis, document_text):
-        parameters = self._build_parameter_list(analysis)
+        parameters = analysis
         prompt = self.EXTRACTION_PROMPT.format(
             parameters=json.dumps(parameters, indent=2),
             document=document_text[:8000]

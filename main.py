@@ -5,7 +5,9 @@ from src.pipeline.calculation_engine import CalculationEngine
 from src.pipeline.validation import TermValidator
 
 
+
 from src.utils.document_loader import load_term_sheet, save_result
+from src.adapters.market_data import MarketDataFetcher
 
 def main():
     # Initialize components
@@ -20,16 +22,13 @@ def main():
     
     # Process pipeline
     analysis = analyzer.analyze(doc_text)
-    validator.validate_conceptual(analysis)
     
     extracted = extractor.extract(analysis, doc_text)
-    validator.validate_extraction(extracted)
     
     dates = temporal.process_dates(extracted['dates'])
-    market_data = MarketDataClient().fetch(extracted['underlyings'], dates)
+    market_data = MarketDataFetcher().fetch(extracted['underlyings'], dates)
     
     payment = calculator.execute(extracted, market_data)
-    validator.validate_result(payment)
     
     save_result(payment, "output/payment_report.json")
 

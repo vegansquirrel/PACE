@@ -1,21 +1,32 @@
+# src/adapters/llm_adapter.py
 from openai import OpenAI
 import os
 import json
-from dotenv import load_dotenv
+import logging
 
-load_dotenv()
+logger = logging.getLogger(__name__)
 
 class LLMAdapter:
     def query(self, system_prompt, user_prompt, **kwargs):
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        response = client.chat.completions.create(
-            model="gpt-4-turbo",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            response_format={"type": "json_object"},
-            temperature=kwargs.get("temperature", 0.2),
-            max_tokens=kwargs.get("max_tokens", 2000)
-        )
-        return json.loads(response.choices[0].message.content)
+        try:
+            client = OpenAI(
+                api_key=os.getenv("OPENAI_API_KEY"),
+                timeout=120  # Add connection timeout
+            )
+            response = client.chat.completions.create(
+                model="gpt-4-turbo",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                response_format={"type": "json_object"},
+                temperature=kwargs.get("temperature", 0.2),
+                max_tokens=kwargs.get("max_tokens", 2000)
+            )
+            return json.loads(response.choices[0].message.content)
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON parsing failed: {str(e)}")
+            return {"error": "Invalid LLM response format"}
+        except Exception as e:
+            logger.critical(f"API connection failed: {str(e)}")
+            return {"error": "Connection to AI service failed"}
