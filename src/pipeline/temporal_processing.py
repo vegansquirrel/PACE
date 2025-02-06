@@ -36,5 +36,5 @@ Return JSON with:
                 system_prompt="You are an expert date parser",
                 user_prompt=self.DATE_PROMPT.format(date_text=desc)
             )
-            processed.append(self._validate_date(response))
+            processed.append(response)
         return processed

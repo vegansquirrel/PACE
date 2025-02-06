@@ -25,8 +25,8 @@ def main():
     
     extracted = extractor.extract(analysis, doc_text)
     
-    dates = temporal.process_dates(extracted['dates'])
-    market_data = MarketDataFetcher().fetch(extracted['underlyings'], dates)
+    dates = temporal.process_dates(extracted)
+    market_data = MarketDataFetcher().get_prices(extracted, dates)
     
     payment = calculator.execute(extracted, market_data)
     

@@ -18,11 +18,8 @@ class MarketDataFetcher:
         )['Close'].values.tolist()
     
     def _fetch_alphavantage(self, ticker):
-        """Fallback API (requires API key)"""
-        import requests
-        API_KEY = "4AJTAJMPZJ0MHE7G"  # Get from https://www.alphavantage.co
-    
-        url = f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={ticker}&apikey={API_KEY}"
-    
-        response = requests.get(url).json()
-        return float(response["Global Quote"]["05. price"])
+        
+        API_KEY = "4AJTAJMPZJ0MHE7G" 
+        response = requests.get(f"https://www.alphavantage.co/query?...{ticker}")
+        print(response)
+        return response.json()['Global Quote']['05. price']
