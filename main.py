@@ -25,8 +25,9 @@ def main():
     
     # Process pipeline
     analysis = analyzer.analyze(doc_text)
-    
+    save_result(analysis, "output/analysis.json")
     extracted = extractor.extract(analysis, doc_text)
+    save_result(extracted, "output/extracted_terms.json")
     
     dates = temporal.process_dates(extracted)
     market_data = MarketDataFetcher().get_prices(extracted, dates)
