@@ -1,0 +1,904 @@
+{
+  "sections": [
+    {
+      "product_type": "Phoenix Autocallable Notes",
+      "underlyings": [
+        {
+          "name": "Renault S.A.",
+          "ticker": "Not specified",
+          "type": "Stock"
+        }
+      ],
+      "key_dates": {
+        "observation": "Not specified",
+        "maturity": "May 24, 2029"
+      },
+      "payment_terms": [
+        {
+          "type": "Issue Price",
+          "level": "100%",
+          "currency": "EUR"
+        }
+      ],
+      "market_data_needed": [
+        "Stock prices of Renault S.A.",
+        "Volatility of Renault S.A. stock",
+        "Dividends of Renault S.A. stock"
+      ]
+    },
+    {
+      "product_type": "Unknown specific type, likely a structured product with conditional coupons",
+      "underlyings": [
+        {
+          "name": "The Share",
+          "ticker": "Not specified",
+          "type": "Stock"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "August 12, 2024",
+          "November 11, 2024",
+          "February 10, 2025",
+          "May 12, 2025",
+          "August 11, 2025",
+          "November 10, 2025",
+          "February 10, 2026",
+          "May 11, 2026",
+          "August 10, 2026",
+          "November 10, 2026",
+          "February 10, 2027",
+          "May 10, 2027",
+          "August 10, 2027",
+          "November 10, 2027",
+          "February 10, 2028",
+          "May 10, 2028",
+          "August 10, 2028",
+          "November 10, 2028",
+          "February 12, 2029",
+          "May 10, 2029"
+        ],
+        "maturity": "May 24, 2029"
+      },
+      "payment_terms": {
+        "type": "Conditional Coupon",
+        "level": "Not specified",
+        "currency": "EUR"
+      },
+      "market_data_needed": [
+        "Closing prices of the underlying asset on specified valuation dates",
+        "Volatility of the underlying asset (implied or historical, depending on the product structure)",
+        "Dividend information of the underlying asset (if applicable)"
+      ]
+    },
+    {
+      "product_type": "Conditional Coupon Structured Product",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not Specified",
+          "type": "Not Specified"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "August 12, 2024",
+          "November 11, 2024",
+          "February 10, 2025",
+          "May 12, 2025",
+          "August 11, 2025",
+          "November 10, 2025",
+          "February 10, 2026"
+        ],
+        "maturity": "Not Specified"
+      },
+      "payment_terms": {
+        "type": "Conditional Coupon",
+        "level": "60% of the Asset Initial Price",
+        "currency": "Not Specified"
+      },
+      "market_data_needed": [
+        "Asset Initial Price",
+        "Coupon Barrier Closing Price"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Not specified",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "November 11, 2024",
+          "February 10, 2025",
+          "May 12, 2025",
+          "August 11, 2025",
+          "November 10, 2025",
+          "February 10, 2026",
+          "May 11, 2026",
+          "August 10, 2026",
+          "November 10, 2026",
+          "February 10, 2027",
+          "May 10, 2027",
+          "August 10, 2027",
+          "November 10, 2027",
+          "February 10, 2028",
+          "May 10, 2028",
+          "August 10, 2028",
+          "November 10, 2028",
+          "February 12, 2029",
+          "May 10, 2029"
+        ],
+        "maturity": "May 24, 2029"
+      },
+      "payment_terms": {
+        "type": "autocall payout",
+        "level": "Not specified",
+        "currency": "Not specified"
+      },
+      "market_data_needed": [
+        "prices",
+        "volatilities",
+        "dividends"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "May 12, 2025",
+          "August 11, 2025",
+          "November 10, 2025",
+          "February 10, 2026",
+          "May 11, 2026",
+          "August 10, 2026",
+          "November 10, 2026",
+          "February 10, 2027",
+          "May 10, 2027",
+          "August 10, 2027",
+          "November 10, 2027",
+          "February 10, 2028",
+          "May 10, 2028",
+          "August 10, 2028",
+          "November 10, 2028"
+        ],
+        "maturity": [
+          "May 24, 2025",
+          "August 24, 2025",
+          "November 24, 2025",
+          "February 24, 2026",
+          "May 25, 2026",
+          "August 24, 2026",
+          "November 24, 2026",
+          "February 24, 2027",
+          "May 24, 2027",
+          "August 24, 2027",
+          "November 24, 2027",
+          "February 24, 2028",
+          "May 24, 2028",
+          "August 24, 2028",
+          "November 24, 2028"
+        ]
+      },
+      "payment_terms": {
+        "type": "Autocall Event Amount",
+        "level": "100% of the Asset Initial Price",
+        "currency": "EUR"
+      },
+      "market_data_needed": [
+        "closing prices",
+        "initial price of the asset"
+      ]
+    },
+    {
+      "product_type": "Structured Note",
+      "underlyings": [
+        {
+          "name": "Not specified",
+          "ticker": "Not specified",
+          "type": "Share, Index, Commodity, Commodity Index, FX Rate, Inflation Index, Fund, Credit"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "May 10, 2027",
+          "May 24, 2027",
+          "August 10, 2027",
+          "August 24, 2027",
+          "November 10, 2027",
+          "November 24, 2027",
+          "February 10, 2028",
+          "February 24, 2028",
+          "May 10, 2028",
+          "May 24, 2028",
+          "August 10, 2028",
+          "August 24, 2028",
+          "November 10, 2028",
+          "November 24, 2028",
+          "February 12, 2029",
+          "February 26, 2029"
+        ],
+        "maturity": "February 26, 2029"
+      },
+      "payment_terms": [
+        {
+          "type": "Multiple Limb Payout",
+          "level": "100%",
+          "currency": "Not specified"
+        },
+        {
+          "type": "Downside Cash Settlement",
+          "level": "Final Closing Price",
+          "currency": "Not specified"
+        }
+      ],
+      "market_data_needed": [
+        "Closing Prices",
+        "Initial Closing Price",
+        "Final Closing Price"
+      ]
+    },
+    {
+      "product_type": "Share Linked Note",
+      "underlyings": [
+        {
+          "name": "Renault S.A.",
+          "ticker": "RNO FP",
+          "type": "Equity"
+        }
+      ],
+      "key_dates": {
+        "observation": "Not Applicable",
+        "maturity": "Not Applicable"
+      },
+      "payment_terms": [
+        {
+          "type": "Barrier Event",
+          "level": "50%",
+          "currency": "Not Applicable"
+        }
+      ],
+      "market_data_needed": [
+        "Closing Prices",
+        "Volatility",
+        "Dividends"
+      ]
+    },
+    {
+      "product_type": "Share Linked Notes",
+      "underlyings": [
+        {
+          "name": "Renault S.A.",
+          "ticker": "RNO FP",
+          "type": "Equity"
+        }
+      ],
+      "key_dates": {
+        "observation": "Default Valuation Time",
+        "maturity": "Not specified in the provided text"
+      },
+      "payment_terms": {
+        "type": "Not specified in the provided text",
+        "level": "Not specified in the provided text",
+        "currency": "Not specified in the provided text"
+      },
+      "market_data_needed": [
+        "Share price of Renault S.A.",
+        "Volatility of Renault S.A. shares",
+        "Dividends of Renault S.A."
+      ]
+    },
+    {
+      "product_type": "FX Linked Notes",
+      "underlyings": [
+        {
+          "name": "USD",
+          "ticker": "USD",
+          "type": "Currency"
+        }
+      ],
+      "key_dates": {
+        "observation": "Not specified",
+        "maturity": "Not specified"
+      },
+      "payment_terms": [
+        {
+          "type": "FX Rate",
+          "level": "As specified in FX Linked Condition 4",
+          "currency": "USD"
+        }
+      ],
+      "market_data_needed": [
+        {
+          "data_type": "FX Rate",
+          "details": "USD/Affected Currency FX Rate",
+          "source": "Refinitiv Benchmark Services Limited",
+          "time": "At or around 4 p.m., London Time"
+        }
+      ]
+    },
+    {
+      "product_type": "Notes",
+      "underlyings": [],
+      "key_dates": {
+        "observation": "Not specified",
+        "maturity": "Not specified"
+      },
+      "payment_terms": {
+        "type": "Not specified",
+        "level": "Not specified",
+        "currency": "EUR"
+      },
+      "market_data_needed": [
+        "Not specified"
+      ]
+    },
+    {
+      "product_type": "Notes",
+      "underlyings": [
+        {
+          "name": "Not specified",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": "Not specified",
+        "maturity": "Not specified"
+      },
+      "payment_terms": [
+        {
+          "type": "selling commission",
+          "level": "6.45%",
+          "currency": "percentage of the Aggregate Nominal Amount"
+        },
+        {
+          "type": "recurring fee",
+          "level": "up to 0.15% per year",
+          "currency": "scaled by the last available price of the Note"
+        }
+      ],
+      "market_data_needed": [
+        "last available price of the Note",
+        "performance and volatility data from Bloomberg and Reuters"
+      ]
+    },
+    {
+      "product_type": "Notes",
+      "underlyings": [],
+      "key_dates": {
+        "observation": null,
+        "maturity": null
+      },
+      "payment_terms": {
+        "type": "coupon",
+        "level": "30 per cent",
+        "currency": "USD"
+      },
+      "market_data_needed": [
+        "dividend rates",
+        "tax rates"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "August 12, 2024",
+          "May 12, 2025"
+        ],
+        "maturity": "Not specified"
+      },
+      "payment_terms": [
+        {
+          "type": "Coupon Payment",
+          "level": "60% of the Asset Initial Price",
+          "currency": "EUR"
+        },
+        {
+          "type": "Autocall Event",
+          "level": "100% of the Asset Initial Price",
+          "currency": "EUR"
+        }
+      ],
+      "market_data_needed": [
+        "Reference Price",
+        "Asset Initial Price",
+        "Coupon Barrier Level",
+        "Autocall Level",
+        "Barrier Level"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "May 12, 2025",
+          "February 10, 2026"
+        ],
+        "maturity": "Not specified"
+      },
+      "payment_terms": [
+        {
+          "type": "Autocall Event Amount",
+          "level": "1000",
+          "currency": "EUR"
+        },
+        {
+          "type": "Coupon Amount",
+          "level": "20",
+          "currency": "EUR"
+        }
+      ],
+      "market_data_needed": [
+        "Reference Price",
+        "Coupon Barrier Level",
+        "Autocall Level"
+      ]
+    },
+    {
+      "product_type": "autocallable note",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": "February 10, 2026",
+        "maturity": "Not specified, but implied to be after February 10, 2026"
+      },
+      "payment_terms": [
+        {
+          "type": "Coupon Amount",
+          "level": [
+            {
+              "scenario": "greater than or equal to Coupon Barrier Level but less than Autocall Level",
+              "amount": "EUR 20"
+            },
+            {
+              "scenario": "60% or more of Asset Initial Price",
+              "amount": "EUR 20"
+            },
+            {
+              "scenario": "less than 60% of Asset Initial Price",
+              "amount": "No Coupon"
+            },
+            {
+              "scenario": "49% of Asset Initial Price",
+              "amount": "No Coupon"
+            }
+          ],
+          "currency": "EUR"
+        },
+        {
+          "type": "Final Redemption Amount",
+          "level": [
+            {
+              "scenario": "60% or more of Asset Initial Price",
+              "amount": "EUR 1,000"
+            },
+            {
+              "scenario": "50% or more but less than 60% of Asset Initial Price",
+              "amount": "EUR 1,000"
+            },
+            {
+              "scenario": "49% of Asset Initial Price",
+              "amount": "EUR 1,000"
+            }
+          ],
+          "currency": "EUR"
+        }
+      ],
+      "market_data_needed": [
+        "Reference Price of the Underlying Asset",
+        "Final Closing Price of the Underlying Asset",
+        "Asset Initial Price"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": "Automatic Early Redemption Date",
+        "maturity": "Maturity Date"
+      },
+      "payment_terms": [
+        {
+          "type": "Final Redemption Amount",
+          "level": "0% to 49% of the Calculation Amount",
+          "currency": "EUR"
+        },
+        {
+          "type": "Coupon Amount",
+          "level": "Not payable on maturity",
+          "currency": "EUR"
+        }
+      ],
+      "market_data_needed": {
+        "prices": "Final Closing Price, Asset Initial Price",
+        "volatilities": "Not specified",
+        "dividends": "Not specified"
+      }
+    },
+    {
+      "product_type": "Phoenix Autocallable Notes",
+      "underlyings": [
+        {
+          "name": "Renault S.A.",
+          "ticker": null,
+          "type": "stocks"
+        }
+      ],
+      "key_dates": {
+        "observation": null,
+        "maturity": "24 May 2029"
+      },
+      "payment_terms": [],
+      "market_data_needed": [
+        "stock prices of Renault S.A.",
+        "volatilities of underlying stock",
+        "dividends of Renault S.A."
+      ]
+    },
+    {
+      "product_type": "unknown",
+      "underlyings": [],
+      "key_dates": {
+        "observation": [],
+        "maturity": []
+      },
+      "payment_terms": {
+        "type": "unknown",
+        "level": "unknown",
+        "currency": "USD"
+      },
+      "market_data_needed": [
+        "credit ratings",
+        "financial statements data"
+      ]
+    },
+    {
+      "product_type": "share linked Securities in the form of notes",
+      "underlyings": [
+        {
+          "name": "not specified",
+          "ticker": "not specified",
+          "type": "shares"
+        }
+      ],
+      "key_dates": {
+        "issue_date": "8 February 2024",
+        "maturity_date": "24 May 2029"
+      },
+      "payment_terms": [
+        {
+          "type": "interest coupons",
+          "level": "not specified",
+          "currency": "Euro"
+        },
+        {
+          "type": "autocall event amount",
+          "level": "not specified",
+          "currency": "Euro"
+        },
+        {
+          "type": "non-scheduled early repayment amount",
+          "level": "not specified",
+          "currency": "Euro"
+        },
+        {
+          "type": "final redemption amount",
+          "level": "not specified",
+          "currency": "Euro"
+        }
+      ],
+      "market_data_needed": [
+        "share prices",
+        "issuer credit risk",
+        "market views on creditworthiness"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "12 August 2024",
+          "11 November 2024",
+          "10 February 2025",
+          "12 May 2025",
+          "11 August 2025",
+          "10 November 2025",
+          "10 February 2026",
+          "11 May 2026",
+          "10 August 2026",
+          "10 November 2026",
+          "10 February 2027",
+          "10 May 2027",
+          "10 August 2027",
+          "10 November 2027",
+          "10 February 2028",
+          "10 May 2028",
+          "10 August 2028",
+          "10 November 2028",
+          "12 February 2029",
+          "10 May 2029"
+        ],
+        "maturity": "24 May 2029"
+      },
+      "payment_terms": [
+        {
+          "type": "Coupon",
+          "level": "60%",
+          "currency": "EUR"
+        }
+      ],
+      "market_data_needed": {
+        "prices": [
+          "Initial Closing Price",
+          "Reference Price on each Coupon Observation Date"
+        ],
+        "volatilities": [],
+        "dividends": []
+      }
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Underlying Asset",
+          "ticker": "Not specified",
+          "type": "Share"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "10 May 2024",
+          "12 May 2025",
+          "11 August 2025",
+          "10 November 2025",
+          "10 February 2026",
+          "11 May 2026",
+          "10 August 2026",
+          "10 November 2026",
+          "10 February 2027",
+          "10 May 2027",
+          "10 August 2027",
+          "10 November 2027",
+          "10 February 2028",
+          "10 May 2028",
+          "10 August 2028",
+          "10 November 2028",
+          "12 February 2029"
+        ],
+        "maturity": "12 February 2029"
+      },
+      "payment_terms": [
+        {
+          "type": "Autocall Event Amount",
+          "level": "100%",
+          "currency": "EUR"
+        },
+        {
+          "type": "Coupon Barrier Level",
+          "level": "60%",
+          "currency": "Not specified"
+        }
+      ],
+      "market_data_needed": [
+        "closing price of the Share",
+        "Reference Price",
+        "Initial Closing Price",
+        "Asset Initial Price",
+        "Coupon Barrier Level",
+        "Coupon Barrier Reference Value",
+        "Autocall Level",
+        "Autocall Reference Value"
+      ]
+    },
+    {
+      "product_type": "autocallable",
+      "underlyings": [
+        {
+          "name": "Renault S.A.",
+          "ticker": "RNO FP",
+          "type": "stock"
+        }
+      ],
+      "key_dates": {
+        "observation": "Final Reference Date: 10 May 2029",
+        "maturity": "10 May 2029"
+      },
+      "payment_terms": [
+        {
+          "type": "Barrier Event",
+          "level": "50%",
+          "currency": "percentage of the Initial Closing Price"
+        },
+        {
+          "type": "Final Redemption Amount",
+          "level": "100%",
+          "currency": "percentage of the Initial Closing Price"
+        }
+      ],
+      "market_data_needed": [
+        "closing prices",
+        "volatilities",
+        "dividends"
+      ]
+    },
+    {
+      "product_type": "unspecified",
+      "underlyings": [
+        {
+          "name": "Renault S.A.",
+          "ticker": "RNO FP",
+          "type": "equity"
+        }
+      ],
+      "key_dates": {
+        "observation": "unspecified",
+        "maturity": "unspecified"
+      },
+      "payment_terms": [
+        {
+          "type": "Barrier Level",
+          "level": "50%",
+          "currency": "of the Asset Initial Price"
+        }
+      ],
+      "market_data_needed": [
+        "Final Closing Price of the Underlying Asset",
+        "prices",
+        "volatilities",
+        "dividends"
+      ]
+    },
+    {
+      "product_type": "Not specified in the provided text",
+      "underlyings": [
+        {
+          "name": "Goldman Sachs Group Inc",
+          "ticker": "GSG",
+          "type": "Stock"
+        }
+      ],
+      "key_dates": {
+        "observation": [
+          "December 31, 2021",
+          "December 31, 2022",
+          "September 30, 2022",
+          "September 30, 2023"
+        ],
+        "maturity": "Not specified in the provided text"
+      },
+      "payment_terms": [
+        {
+          "type": "Net earnings applicable to common shareholders",
+          "level": "Varies (e.g., 10,764 million USD for 2022, 21,151 million USD for 2021)",
+          "currency": "USD"
+        }
+      ],
+      "market_data_needed": [
+        "Stock prices",
+        "Credit ratings",
+        "Capital ratios (e.g., CET1, Tier 1, Total capital ratio)"
+      ]
+    },
+    {
+      "product_type": "Securities with capped return",
+      "underlyings": [
+        {
+          "name": "Not specified",
+          "ticker": "Not specified",
+          "type": "Not specified"
+        }
+      ],
+      "key_dates": {
+        "observation": "Not specified",
+        "maturity": "Not specified"
+      },
+      "payment_terms": [
+        {
+          "type": "Cap",
+          "level": "Not specified",
+          "currency": "Not specified"
+        }
+      ],
+      "market_data_needed": [
+        "price",
+        "volatility",
+        "dividends"
+      ]
+    },
+    {
+      "product_type": "Securities",
+      "underlyings": [
+        {
+          "name": "Shares",
+          "ticker": null,
+          "type": "Equity"
+        }
+      ],
+      "key_dates": {
+        "observation": null,
+        "maturity": null
+      },
+      "payment_terms": [
+        {
+          "type": "Issue Price",
+          "level": "100%",
+          "currency": "Aggregate Nominal Amount"
+        },
+        {
+          "type": "Selling Commission",
+          "level": "6.45%",
+          "currency": "Aggregate Nominal Amount"
+        },
+        {
+          "type": "Recurring Fee",
+          "level": "0.15% per year",
+          "currency": "last available price of the Note"
+        }
+      ],
+      "market_data_needed": [
+        "price levels",
+        "volatilities",
+        "dividends"
+      ]
+    },
+    {
+      "product_type": "unknown",
+      "underlyings": [],
+      "key_dates": {
+        "observation": null,
+        "maturity": null
+      },
+      "payment_terms": {
+        "type": null,
+        "level": null,
+        "currency": null
+      },
+      "market_data_needed": []
+    }
+  ]
+}
