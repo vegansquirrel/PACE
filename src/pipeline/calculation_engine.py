@@ -19,7 +19,7 @@ Rules:
 Return only the Python function code:"""
 
     def execute(self, terms, market_data):
-        code = LLMAdapter().query(
+        response = LLMAdapter().query(
             system_prompt="You are a financial quant developer",
             user_prompt=self.CODE_PROMPT.format(
                 product_type=terms['product_type'],
@@ -27,4 +27,19 @@ Return only the Python function code:"""
                 market_data=list(market_data.keys())
             )
         )
+        code = response["code"]
         return self._safe_execute(code, terms, market_data)
+    
+    def _safe_execute(self, code, terms, market_data):  # MISSING METHOD
+        # Add implementation from calculator.py
+        restricted_globals = {
+            '__builtins__': {
+                'float': float,
+                'min': min,
+                'max': max,
+                'sum': sum
+            }
+        }
+        loc = {}
+        exec(RestrictedPython.compile_restricted(code), restricted_globals, loc)
+        return loc['calculate'](market_data)

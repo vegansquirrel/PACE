@@ -4,6 +4,9 @@ from src.pipeline.temporal_processing import TemporalProcessor
 from src.pipeline.calculation_engine import CalculationEngine
 from src.pipeline.validation import TermValidator
 
+from dotenv import load_dotenv
+from config.config import PROJECT_ROOT, DOCUMENT_PATHS
+load_dotenv(PROJECT_ROOT / '.env')
 
 
 from src.utils.document_loader import load_term_sheet, save_result

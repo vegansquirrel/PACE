@@ -26,3 +26,7 @@ class TermValidator:
         for key in keys:
             data = data.get(key, {})
         return data
+    
+    def validate(self, extracted_data):
+        if errors:
+            raise ValueError(f"Critical issues: {errors}")
