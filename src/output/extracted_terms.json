@@ -1,0 +1,32 @@
+{
+  "underlying_assets": [
+    {
+      "name": "Engie shares",
+      "ticker": "ENGI.PA",
+      "exchange": "Euronext Paris"
+    }
+  ],
+  "payment_terms": {
+    "initial_level": 100,
+    "initial_date": "2024-12-20",
+    "autocall_level": 100,
+    "barrier_level": 70,
+    "coupon_rate": 0.0785,
+    "observation_dates": [
+      "2025-06-13",
+      "2025-12-15",
+      "2026-06-15",
+      "2026-12-14",
+      "2027-06-14",
+      "2027-12-13",
+      "2028-06-13",
+      "2028-12-13",
+      "2029-06-13",
+      "2029-12-13"
+    ]
+  },
+  "principal": {
+    "amount": 100,
+    "currency": "EUR"
+  }
+}
